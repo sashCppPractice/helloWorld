@@ -1,0 +1,38 @@
+// LinkedList.cpp : Defines the entry point for the console application.
+// Creating a linked list 
+
+#include "stdafx.h"
+#include "iostream"
+using namespace std;
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+void main()
+{
+    struct node* head=NULL;
+    struct node* second=NULL;
+    struct node* third=NULL;
+    struct node* fourth=NULL;
+    
+    head =(struct node*)malloc(sizeof(struct node));
+    second =(struct node*)malloc(sizeof(struct node));
+    third =(struct node*)malloc(sizeof(struct node));
+    fourth =(struct node*)malloc(sizeof(struct node));
+
+    head->data=10;
+    head->next=second;
+
+    second->data=20;
+    second->next=third;
+
+    third->data=30;
+    third->next=fourth;
+
+    fourth->data=40;
+    fourth->next=NULL;
+}
+
